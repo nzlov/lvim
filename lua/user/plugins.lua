@@ -117,7 +117,6 @@ M.config = function()
       "nvim-lua/lsp-status.nvim",
       disable = not lvim.builtin.fancy_galaxyline.active,
     },
-    { "mfussenegger/nvim-jdtls", ft = "java" },
     {
       "kristijanhusak/orgmode.nvim",
       ft = { "org" },
