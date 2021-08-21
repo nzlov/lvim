@@ -4,7 +4,7 @@ M.config = function()
 
     lvim.builtin.galaxyline.active = true
     lvim.builtin.dashboard.active = true
-    lvim.builtin.dap.active = false
+    lvim.builtin.dap.active = true
     lvim.builtin.terminal.active = true
     lvim.builtin.tabnine = { active = true }
     lvim.builtin.lastplace = { active = true }
