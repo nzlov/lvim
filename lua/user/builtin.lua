@@ -32,7 +32,7 @@ M.config = function()
         require("user.galaxyline").config(gl)
       end
     end
-    
+
     if lvim.builtin.dap.active then
       require("user.dap").config()
     end
