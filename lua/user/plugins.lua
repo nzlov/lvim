@@ -114,10 +114,6 @@ M.config = function()
       event = "BufRead",
     },
     {
-      "nvim-lua/lsp-status.nvim",
-      disable = not lvim.builtin.fancy_galaxyline.active,
-    },
-    {
       "kristijanhusak/orgmode.nvim",
       ft = { "org" },
       config = function()
