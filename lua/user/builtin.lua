@@ -27,6 +27,7 @@ M.config = function()
     end
 
     require("user.lualine").config()
+    -- require'dap'.set_log_level('TRACE')
 
 end
 
