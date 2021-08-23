@@ -26,6 +26,8 @@ M.config = function()
         lvim.builtin.compe.source.tabnine = { kind = " ", priority = 150, max_reslts = 6 }
     end
 
+    require("user.lualine").config()
+
 end
 
 return M

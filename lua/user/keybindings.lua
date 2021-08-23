@@ -11,6 +11,7 @@ M.config = function ()
 
   if lvim.builtin.dap.active then
     lvim.keys.normal_mode["<M-g>"] = "<cmd>lua require'dapui'.toggle()<cr>"
+    lvim.keys.normal_mode["<M-k>"] = "<cmd>lua require'dapui'.eval()<cr>"
     lvim.keys.normal_mode["<M-t>"] = "<cmd>lua require'dap'.toggle_breakpoint()<cr>"
     lvim.keys.normal_mode["<M-b>"] = "<cmd>lua require'dap'.step_back()<cr>"
     lvim.keys.normal_mode["<M-c>"] = "<cmd>lua require'dap'.continue()<cr>"
