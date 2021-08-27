@@ -14,11 +14,13 @@ M.config = function()
     lvim.builtin.compe.autocomplete = true
 
     lvim.builtin.nvimtree.side = "left"
-    lvim.builtin.nvimtree.show_icons.git = 0
+    lvim.builtin.nvimtree.show_icons.git = 1
 
     lvim.builtin.treesitter.ensure_installed = {}
     lvim.builtin.treesitter.ignore_install = { "haskell" }
     lvim.builtin.treesitter.highlight.enabled = true
+
+    lvim.builtin.telescope.defaults.path_display = {}
 
 
     if lvim.builtin.tabnine.active then
