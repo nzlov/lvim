@@ -8,8 +8,21 @@ M.config = function ()
 
   lvim.keys.visual_mode["<C-c>"] = "<esc>"
 
-  lvim.keys.normal_mode["[d"] =  "<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>"
-  lvim.keys.normal_mode["]d"] =  "<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = lvim.lsp.popup_border}})<cr>"
+  lvim.builtin.which_key.on_config_done = function (which_key)
+    local mappings = {
+      ["[d"] = {"<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>","Prev diagnostic"},
+      ["]d"] = {"<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = lvim.lsp.popup_border}})<cr>","Next diagnostic"},
+    }
+    local opts = {
+      mode = "n", -- NORMAL mode
+      prefix = "",
+      buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+      silent = true, -- use `silent` when creating keymaps
+      noremap = true, -- use `noremap` when creating keymaps
+      nowait = true, -- use `nowait` when creating keymaps
+    }
+    which_key.register(mappings, opts)
+  end
 
   if lvim.builtin.dap.active then
     lvim.builtin.which_key.mappings["dw"] = { "<cmd>lua require'dapui'.toggle()<cr>", "Dap UI" }
