@@ -4,7 +4,7 @@
 lvim.format_on_save = true
 lvim.lint_on_save = true
 lvim.colorscheme = "onedarker"
-lvim.log.level = "debug"
+-- lvim.log.level = "debug"
 
 vim.opt.relativenumber = true
 vim.opt.wrap = true
