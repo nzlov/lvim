@@ -11,8 +11,6 @@ M.config = function()
     lvim.builtin.orgmode = {active = true}
     lvim.builtin.bufferline.active = true
 
-    lvim.builtin.compe.autocomplete = true
-
     lvim.builtin.nvimtree.side = "left"
     lvim.builtin.nvimtree.show_icons.git = 1
 
@@ -24,8 +22,12 @@ M.config = function()
 
 
     if lvim.builtin.tabnine.active then
-        lvim.builtin.compe.source.tabnine = true
-        lvim.builtin.compe.source.tabnine = { kind = " ", priority = 150, max_reslts = 6 }
+      local tabnine = require('cmp_tabnine.config')
+      tabnine:setup({
+              max_lines = 1000;
+              max_num_results = 20;
+              sort = true;
+      })
     end
 
     require("user.lualine").config()

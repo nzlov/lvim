@@ -57,10 +57,9 @@ M.config = function()
       event = "BufRead",
     },
     {
-      "tzachar/compe-tabnine",
+      "tzachar/cmp-tabnine",
       run = "./install.sh",
-      requires = "hrsh7th/nvim-compe",
-      event = "InsertEnter",
+      requires = "hrsh7th/nvim-cmp",
       disable = not lvim.builtin.tabnine.active,
     },
     {
