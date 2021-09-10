@@ -1,1 +1,6 @@
-{}
+{
+  "gopls": {
+    "ui.completion.usePlaceholders": true,
+    "formatting.gofumpt": true
+  }
+}
