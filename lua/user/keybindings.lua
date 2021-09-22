@@ -26,6 +26,7 @@ M.config = function ()
 
   if lvim.builtin.dap.active then
     lvim.builtin.which_key.mappings["dw"] = { "<cmd>lua require'dapui'.toggle()<cr>", "Dap UI" }
+    lvim.builtin.which_key.mappings["lR"] = { "<cmd>LspRestart<cr>", "Restart" }
     lvim.keys.normal_mode["<M-g>"] = "<cmd>lua require'dapui'.toggle()<cr>"
     lvim.keys.normal_mode["<M-h>"] = "<cmd>lua require'dapui'.eval()<cr>"
     lvim.keys.normal_mode["<M-t>"] = "<cmd>lua require'dap'.toggle_breakpoint()<cr>"
